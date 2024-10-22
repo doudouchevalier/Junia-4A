@@ -3,3 +3,13 @@ name: Mon Workflow
 on:
   push:
     branches: [develop]
+
+jobs:
+  lint:
+    runs-on: [self-hosted, linux, x64]
+    steps:
+      - name: Checkout code
+        uses: actions/checkouts@v3
+
+      - name: Lint files
+        run: php -l *.php
