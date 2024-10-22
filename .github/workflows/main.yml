@@ -1,0 +1,5 @@
+name: Mon Workflow
+
+on:
+  push:
+    branches: [develop]
