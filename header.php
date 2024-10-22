@@ -26,6 +26,7 @@
       <li <?php {if($page == "connect.php" || $page == "register.php" || $page == "forgotpassword.php" || $page == "changepassword.php") echo 'class="active"';} ?>><a href="connect.php">Login</a></li>
       <?php } ?>
 
+
     </ul>
   </div>
 </header>
