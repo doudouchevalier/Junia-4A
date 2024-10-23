@@ -24,7 +24,7 @@ jobs:
         uses: docker/setup-buildx-action@v2
 
       - name: Build Docker image
-        run: docker build -t doudouchevalier/WebServerNginx:latest .
+        run: docker build -t doudouchevalier/webservernginx:latest .
   push:
     runs-on: [self-hosted, linux, x64]
 
@@ -39,4 +39,4 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Push Docker image
-        run: docker push doudouchevalier/WebServerNginx:latest
+        run: docker push doudouchevalier/webservernginx:latest
