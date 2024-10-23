@@ -5,7 +5,7 @@ FROM php:8.2-fpm
 RUN apt-get update && apt-get install -y nginx
 
 # Copie du fichier de configuration Nginx dans le conteneur
-COPY ./nginx.conf /etc/nginx/nginx.conf
+COPY ./nginx.conf /etc/nginx/sites-enabled/default
 
 # Installation des extensions PHP si nécessaire
 RUN docker-php-ext-install pdo pdo_mysql
