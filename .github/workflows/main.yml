@@ -15,6 +15,7 @@ jobs:
         run: find . -name "*.php" -print0 | xargs -0 -n1 php -l
   build:
     runs-on: [self-hosted, linux, x64]
+    needs:lint
 
     steps:
       - name: Checkout code
@@ -27,6 +28,7 @@ jobs:
         run: docker build -t doudouchevalier/webservernginx:latest .
   push:
     runs-on: [self-hosted, linux, x64]
+    needs: build
 
     steps:
       - name: Checkout code
