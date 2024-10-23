@@ -29,9 +29,5 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Build and push Docker image
-        uses: docker/build-push-action@v3
-        with:
-          context: .
-          push: true
-          tags: yourusername/yourimage:latest
+      - name: Build Docker image
+        run: | docker build -t monImage doudouchevalier/my-site:latest .
