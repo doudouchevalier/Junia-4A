@@ -30,4 +30,4 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker image
-        run: | docker build -t monImage doudouchevalier/my-site:latest .
+        run: docker build -t monImage doudouchevalier/my-site:latest .
